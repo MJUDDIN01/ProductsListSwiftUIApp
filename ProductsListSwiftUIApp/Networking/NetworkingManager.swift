@@ -22,8 +22,6 @@ class NetworkingManager {
                     let decoder = JSONDecoder()
                     let productResponse: ProductResponse = try decoder.decode(ProductResponse.self, from: data)
                                         completed(.success(productResponse.products))
-//                    let products: [Products] = try decoder.decode([Products].self, from: data)
-//                    completed(.success(products))
                 } catch {
                         completed(.failure(.unableToParseData))
                     }

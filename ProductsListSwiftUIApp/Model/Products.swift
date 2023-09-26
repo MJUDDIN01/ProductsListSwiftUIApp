@@ -14,12 +14,12 @@ struct ProductResponse: Codable {
 
 struct Products: Identifiable, Codable {
     let id: Int
-      let title, description: String
-      let price: Int
-      let discountPercentage, rating: Double
-      let stock: Int
-      let brand, category: String
-      let thumbnail: String
-      let images: [String]
+    let title, description: String
+    let price: Int
+    let discountPercentage, rating: Double
+    let stock: Int
+    let brand, category: String
+    let thumbnail: String
+    let images: [String]
 }
 
