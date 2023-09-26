@@ -7,6 +7,11 @@
 
 import SwiftUI
 
+struct ProductResponse: Codable {
+    let products: [Products]
+    let total: Int
+}
+
 struct Products: Identifiable, Codable {
     let id: Int
       let title, description: String

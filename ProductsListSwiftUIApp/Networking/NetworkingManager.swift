@@ -20,8 +20,10 @@ class NetworkingManager {
             case .success(let data):
                 do {
                     let decoder = JSONDecoder()
-                    let products: [Products] = try decoder.decode([Products].self, from: data)
-                    completed(.success(products))
+                    let productResponse: ProductResponse = try decoder.decode(ProductResponse.self, from: data)
+                                        completed(.success(productResponse.products))
+//                    let products: [Products] = try decoder.decode([Products].self, from: data)
+//                    completed(.success(products))
                 } catch {
                         completed(.failure(.unableToParseData))
                     }

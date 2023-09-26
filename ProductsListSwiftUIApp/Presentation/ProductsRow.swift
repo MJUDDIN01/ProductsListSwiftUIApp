@@ -16,7 +16,6 @@ struct ProductsRow: View {
                 .bold()
                 .padding()
             Text(product.description)
-                .padding()
             
             Spacer()
         }
