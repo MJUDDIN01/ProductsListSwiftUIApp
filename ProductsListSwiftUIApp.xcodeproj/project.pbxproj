@@ -19,6 +19,7 @@
 		9F8695D62AC315970071773A /* ServerErrorAlert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F8695D52AC315970071773A /* ServerErrorAlert.swift */; };
 		9F8695D82AC316D50071773A /* AlertMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F8695D72AC316D50071773A /* AlertMessage.swift */; };
 		9F8695DA2AC320870071773A /* ProductsLoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F8695D92AC320870071773A /* ProductsLoadingView.swift */; };
+		9F8695DC2AC478630071773A /* ProductsDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F8695DB2AC478630071773A /* ProductsDetailView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -35,6 +36,7 @@
 		9F8695D52AC315970071773A /* ServerErrorAlert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServerErrorAlert.swift; sourceTree = "<group>"; };
 		9F8695D72AC316D50071773A /* AlertMessage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertMessage.swift; sourceTree = "<group>"; };
 		9F8695D92AC320870071773A /* ProductsLoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductsLoadingView.swift; sourceTree = "<group>"; };
+		9F8695DB2AC478630071773A /* ProductsDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductsDetailView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -111,6 +113,7 @@
 				9F8695D12AC308AB0071773A /* ProductsListViewModel.swift */,
 				9F8695D32AC309FF0071773A /* ProductsRow.swift */,
 				9F8695D92AC320870071773A /* ProductsLoadingView.swift */,
+				9F8695DB2AC478630071773A /* ProductsDetailView.swift */,
 			);
 			path = Presentation;
 			sourceTree = "<group>";
@@ -203,6 +206,7 @@
 				9F8695D62AC315970071773A /* ServerErrorAlert.swift in Sources */,
 				9F8695D22AC308AB0071773A /* ProductsListViewModel.swift in Sources */,
 				9F8695D42AC309FF0071773A /* ProductsRow.swift in Sources */,
+				9F8695DC2AC478630071773A /* ProductsDetailView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

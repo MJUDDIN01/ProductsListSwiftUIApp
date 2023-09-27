@@ -11,19 +11,22 @@ struct ProductsListView: View {
     @StateObject private var viewModel = ProductsListViewModel()
     
     var body: some View {
-        
         ZStack {
-            List(viewModel.products) { product in
-                ProductsRow(product: product)
+                List(viewModel.products) { product in
+                    NavigationLink {
+                        ProductsDetailView(product: product)
+                    } label: {
+                        ProductsRow(product: product)
+                    }
+                }
+                .navigationTitle("Phone List")
+                .onAppear { viewModel.refreshProduct() }
+                
+                if viewModel.isLoading { ProductsLoadingView() }
             }
-            .navigationTitle("Phone List")
-            .onAppear { viewModel.refreshProduct() }
-            
-            if viewModel.isLoading { ProductsLoadingView() }
-        }
-        .alert(item: $viewModel.alertData) { alertItem in
-            return Alert(title: Text(alertItem.title), message: Text(alertItem.message),
-                         dismissButton: .default(Text(alertItem.dismissButton)))
-        }
+            .alert(item: $viewModel.alertData) { alertItem in
+                return Alert(title: Text(alertItem.title), message: Text(alertItem.message),
+                             dismissButton: .default(Text(alertItem.dismissButton)))
+            }
     }
 }
