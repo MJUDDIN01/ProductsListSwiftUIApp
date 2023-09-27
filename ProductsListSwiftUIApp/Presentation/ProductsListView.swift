@@ -22,8 +22,8 @@ struct ProductsListView: View {
             if viewModel.isLoading { ProductsLoadingView() }
         }
         .alert(item: $viewModel.alertData) { alertItem in
-            return Alert(title: alertItem.title, message: alertItem.message,
-                         dismissButton: alertItem.dismissButton)
+            return Alert(title: Text(alertItem.title), message: Text(alertItem.message),
+                         dismissButton: .default(Text(alertItem.dismissButton)))
         }
     }
 }

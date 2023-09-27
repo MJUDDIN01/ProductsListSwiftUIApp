@@ -6,19 +6,18 @@
 //
 
 import Foundation
-import SwiftUI
 
 enum ServerErrorAlert {
-    static let unableToParseData = AlertData(title: Text("Fail to refresh"),
-                                             message: Text("Unable parse data from server"),
-                                             dismissButton: .default(Text("OK")))
-    static let urlSessionError = AlertData(title: Text("Fail to refresh"),
-                                           message: Text("Unable parse data from server"),
-                                           dismissButton: .default(Text("OK")))
-    static let httpFailureResponseCode = AlertData(title: Text("Fail to refresh"),
-                                                   message: Text("Unable parse data from server"),
-                                                   dismissButton: .default(Text("OK")))
-    static let noDataReceived = AlertData(title: Text("Fail to refresh"),
-                                          message: Text("Unable parse data from server"),
-                                          dismissButton: .default(Text("OK")))
+    static let unableToParseData = AlertData(title: "Fail to refresh",
+                                             message: "Unable parse data from server",
+                                             dismissButton: "OK")
+    static let urlSessionError = AlertData(title: "Fail to refresh",
+                                           message: "Unable parse data from server",
+                                           dismissButton: "OK")
+    static let httpFailureResponseCode = AlertData(title: "Fail to refresh",
+                                                   message: "Unable parse data from server",
+                                                   dismissButton: "OK")
+    static let noDataReceived = AlertData(title: "Fail to refresh",
+                                          message: "Unable parse data from server",
+                                          dismissButton: "OK")
 }

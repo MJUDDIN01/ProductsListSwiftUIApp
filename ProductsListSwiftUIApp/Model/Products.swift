@@ -5,7 +5,7 @@
 //  Created by Jasim Uddin on 26/09/2023.
 //
 
-import SwiftUI
+import Foundation
 
 struct ProductResponse: Codable {
     let products: [Products]
