@@ -19,7 +19,7 @@ struct ProductsListView: View {
                         ProductsRow(product: product)
                     }
                 }
-                .navigationTitle("Phone List")
+                .navigationTitle("Product List")
                 .onAppear { viewModel.refreshProduct() }
                 
                 if viewModel.isLoading { ProductsLoadingView() }

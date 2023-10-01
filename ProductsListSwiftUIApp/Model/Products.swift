@@ -21,5 +21,11 @@ struct Products: Identifiable, Codable {
     let brand, category: String
     let thumbnail: String
     let images: [String]
+    
+    
+    var thumbNailUrl: URL? {
+        return URL(string: thumbnail)
+    }
 }
+
 

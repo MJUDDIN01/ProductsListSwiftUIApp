@@ -11,13 +11,47 @@ struct ProductsRow: View {
     let product: Products
     
     var body: some View {
-        VStack {
-            Text(product.title)
-                .bold()
-                .padding()
-            Text(product.description)
+        HStack {
+            // Thumbnail image
+            AsyncImage(url: product.thumbNailUrl) { image in
+                image
+                    .resizable()
+                    .scaledToFit()
+                    .frame(width: 32, height: 32)
+                    .foregroundColor(Color.orange)
+            } placeholder: {
+                Circle()
+                    .frame(width: 32, height: 32)
+                    .background(Color(.systemGray5))
+            }
+            // product info
+            VStack(alignment: .leading, spacing: 4) {
+                Text(product.title)
+                    .font(.subheadline)
+                    .fontWeight(.semibold)
+                    .padding(.leading, 4)
+                Text(product.brand.uppercased())
+                    .font(.caption)
+                    .padding(.leading, 6)
+            }
+            .padding(.leading, 2)
+            
             Spacer()
+            // product price info
+            VStack(alignment: .trailing, spacing: 4) {
+                Text("\(product.price.toCurrency())")
+                    .font(.subheadline)
+                    .fontWeight(.semibold)
+                    .padding(.leading, 4)
+                Text("\(product.discountPercentage.toPercentString())")
+                    .font(.caption)
+                    .padding(.leading, 6)
+                    .foregroundColor(product.discountPercentage > 0 ? .red : .green)
+            }
+            .padding(.leading, 2)
         }
+        .padding(.horizontal)
+        .padding(.vertical, 4)
     }
 }
 
