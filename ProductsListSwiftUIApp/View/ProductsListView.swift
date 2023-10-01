@@ -21,7 +21,9 @@ struct ProductsListView: View {
                 }
                 .navigationTitle("Product List")
                 .onAppear { viewModel.refreshProduct() }
-                
+                .refreshable {
+                    viewModel.pullToRefresh()
+                }
                 if viewModel.isLoading { ProductsLoadingView() }
             }
             .alert(item: $viewModel.alertData) { alertItem in

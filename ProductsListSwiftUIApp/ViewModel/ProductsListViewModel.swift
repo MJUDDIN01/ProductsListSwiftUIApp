@@ -12,7 +12,10 @@ class ProductsListViewModel: ObservableObject {
     @Published var isLoading = false
     @Published var alertData: AlertData?
     
-    
+    func pullToRefresh() {
+        products.removeAll()
+        refreshProduct()
+    }
     func refreshProduct() {
         isLoading = true
         
