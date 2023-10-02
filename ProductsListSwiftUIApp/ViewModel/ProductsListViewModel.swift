@@ -11,6 +11,7 @@ class ProductsListViewModel: ObservableObject {
     @Published var products: [Products] = []
     @Published var isLoading = false
     @Published var alertData: AlertData?
+    @Published var searchText = ""
     
     func pullToRefresh() {
         products.removeAll()

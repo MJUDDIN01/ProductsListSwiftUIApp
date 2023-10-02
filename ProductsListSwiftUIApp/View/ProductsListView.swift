@@ -9,7 +9,6 @@ import SwiftUI
 
 struct ProductsListView: View {
     @StateObject private var viewModel = ProductsListViewModel()
-    
     var body: some View {
         ZStack {
                 List(viewModel.products) { product in
@@ -19,7 +18,8 @@ struct ProductsListView: View {
                         ProductsRow(product: product)
                     }
                 }
-                .navigationTitle("Product List")
+                .navigationTitle("Latest Products")
+                .searchable(text: $viewModel.searchText)
                 .onAppear { viewModel.refreshProduct() }
                 .refreshable {
                     viewModel.pullToRefresh()

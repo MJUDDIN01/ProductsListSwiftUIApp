@@ -22,6 +22,7 @@
 		9F8695DC2AC478630071773A /* ProductsDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F8695DB2AC478630071773A /* ProductsDetailView.swift */; };
 		9F8695DF2AC94C4E0071773A /* Double.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F8695DE2AC94C4E0071773A /* Double.swift */; };
 		9F8695E12AC94F440071773A /* Int.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F8695E02AC94F440071773A /* Int.swift */; };
+		9F8695E52ACAC48C0071773A /* SearchBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F8695E42ACAC48C0071773A /* SearchBarView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -41,6 +42,7 @@
 		9F8695DB2AC478630071773A /* ProductsDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductsDetailView.swift; sourceTree = "<group>"; };
 		9F8695DE2AC94C4E0071773A /* Double.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Double.swift; sourceTree = "<group>"; };
 		9F8695E02AC94F440071773A /* Int.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Int.swift; sourceTree = "<group>"; };
+		9F8695E42ACAC48C0071773A /* SearchBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBarView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -119,6 +121,7 @@
 				9F8695D32AC309FF0071773A /* ProductsRow.swift */,
 				9F8695D92AC320870071773A /* ProductsLoadingView.swift */,
 				9F8695DB2AC478630071773A /* ProductsDetailView.swift */,
+				9F8695E42ACAC48C0071773A /* SearchBarView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -233,6 +236,7 @@
 				9F8695DA2AC320870071773A /* ProductsLoadingView.swift in Sources */,
 				9F8695CC2AC2FA000071773A /* Products.swift in Sources */,
 				9F8695B92AC2E5F40071773A /* ProductsListSwiftUIApp.swift in Sources */,
+				9F8695E52ACAC48C0071773A /* SearchBarView.swift in Sources */,
 				9F8695D02AC2FABE0071773A /* NetworkingError.swift in Sources */,
 				9F8695D62AC315970071773A /* ServerErrorAlert.swift in Sources */,
 				9F8695D22AC308AB0071773A /* ProductsListViewModel.swift in Sources */,
@@ -364,11 +368,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = "Tech Corner";
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.shopping";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -392,11 +399,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = "Tech Corner";
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.shopping";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
