@@ -8,7 +8,13 @@
 import SwiftUI
 
 struct ProductsListView: View {
-    @StateObject private var viewModel = ProductsListViewModel()
+    @StateObject private var viewModel: ProductsListViewModel
+    
+    init() {
+        let networkingManager = NetworkingManager.shared
+        self._viewModel = StateObject(wrappedValue: ProductsListViewModel(productFetcher: networkingManager))
+    }
+    
     var body: some View {
         ZStack {
                 List(viewModel.products) { product in

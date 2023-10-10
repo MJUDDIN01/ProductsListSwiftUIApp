@@ -12,12 +12,14 @@ struct ProductsRow: View {
     
     var body: some View {
         HStack {
-            // Thumbnail image
+            // Thumbnail image as circle image
             AsyncImage(url: product.thumbNailUrl) { image in
                 image
                     .resizable()
                     .scaledToFit()
-                    .frame(width: 32, height: 32)
+                    .aspectRatio(contentMode: .fill)
+                    .clipShape(Circle())
+                    .frame(width: 40, height: 40)
                     .foregroundColor(Color.orange)
             } placeholder: {
                 Circle()

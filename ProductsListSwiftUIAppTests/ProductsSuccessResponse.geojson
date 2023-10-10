@@ -1,0 +1,2 @@
+    [{"id":1, "title":"lkjh", "description": "testDesc", "price": 20, "discountPercentage": 1.0, "rating": 4.0, "stock": 5, "brand": "Apple", "category": "testCat", "thumbnail": "image", "images": ["image"]}]
+

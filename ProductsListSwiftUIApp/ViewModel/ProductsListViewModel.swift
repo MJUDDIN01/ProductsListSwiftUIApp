@@ -9,9 +9,16 @@ import Foundation
 
 class ProductsListViewModel: ObservableObject {
     @Published var products: [Products] = []
-    @Published var isLoading = false
+    @Published var isLoading: Bool = false
     @Published var alertData: AlertData?
     @Published var searchText = ""
+    
+    private let productFetcher: ProductFetching
+    
+    // Added constructor dependency 
+    init(productFetcher: ProductFetching) {
+        self.productFetcher = productFetcher
+    }
     
     func pullToRefresh() {
         products.removeAll()
@@ -20,7 +27,7 @@ class ProductsListViewModel: ObservableObject {
     func refreshProduct() {
         isLoading = true
         
-        NetworkingManager.shared.fetchProducts { [weak self] result in
+        productFetcher.fetchProducts { [weak self] result in
             DispatchQueue.main.async { [weak self] in
                 self?.isLoading = false
                 

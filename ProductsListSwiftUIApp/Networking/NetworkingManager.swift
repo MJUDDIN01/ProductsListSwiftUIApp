@@ -7,8 +7,12 @@
 
 import Foundation
 
-class NetworkingManager {
-    
+// Added protocol to decouple
+protocol ProductFetching {
+    func fetchProducts(completed: @escaping (Result<[Products], NetworkingError>) -> Void)
+}
+
+class NetworkingManager: ProductFetching {
     static let shared = NetworkingManager()
     
     func fetchProducts(completed: @escaping (Result<[Products], NetworkingError>) -> Void) {
