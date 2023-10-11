@@ -7,11 +7,11 @@
 
 import Foundation
 
+// Mark:- Add currency for Price
 extension Int {
     private var currencyFormatter: NumberFormatter {
         let formatter = NumberFormatter()
         formatter.numberStyle = .currency
-        // formatter.usesGroupingSeparator = true
         return formatter
     }
     func toCurrency() -> String {

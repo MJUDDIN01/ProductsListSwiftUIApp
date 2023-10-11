@@ -7,6 +7,7 @@
 
 import Foundation
 
+// Mark:- Convert Double to percentage
 extension Double {
     private var numberFormatter: NumberFormatter {
         let formatter = NumberFormatter()
