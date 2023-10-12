@@ -25,6 +25,7 @@
 		9F8695E52ACAC48C0071773A /* SearchBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F8695E42ACAC48C0071773A /* SearchBarView.swift */; };
 		9F8696302AD5EB630071773A /* PhoneMarketListViewModel_Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F86962F2AD5EB630071773A /* PhoneMarketListViewModel_Tests.swift */; };
 		9F8696322AD5F9080071773A /* MockProductFetcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F8696312AD5F9080071773A /* MockProductFetcher.swift */; };
+		9F8696342AD7F8580071773A /* EndPoints.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F8696332AD7F8580071773A /* EndPoints.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -58,6 +59,7 @@
 		9F8696262AD5EA9B0071773A /* ProductsListSwiftUIApp_Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ProductsListSwiftUIApp_Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		9F86962F2AD5EB630071773A /* PhoneMarketListViewModel_Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhoneMarketListViewModel_Tests.swift; sourceTree = "<group>"; };
 		9F8696312AD5F9080071773A /* MockProductFetcher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockProductFetcher.swift; sourceTree = "<group>"; };
+		9F8696332AD7F8580071773A /* EndPoints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EndPoints.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -134,6 +136,7 @@
 				9F8695CD2AC2FAA90071773A /* NetworkingManager.swift */,
 				9F8695CF2AC2FABE0071773A /* NetworkingError.swift */,
 				9F8695D52AC315970071773A /* ServerErrorAlert.swift */,
+				9F8696332AD7F8580071773A /* EndPoints.swift */,
 			);
 			path = Networking;
 			sourceTree = "<group>";
@@ -293,6 +296,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9F8695BB2AC2E5F40071773A /* ProductsListView.swift in Sources */,
+				9F8696342AD7F8580071773A /* EndPoints.swift in Sources */,
 				9F8695E12AC94F440071773A /* Int.swift in Sources */,
 				9F8695D82AC316D50071773A /* AlertMessage.swift in Sources */,
 				9F8695CE2AC2FAA90071773A /* NetworkingManager.swift in Sources */,

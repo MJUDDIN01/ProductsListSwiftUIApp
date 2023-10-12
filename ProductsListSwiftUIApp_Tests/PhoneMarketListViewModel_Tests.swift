@@ -11,18 +11,22 @@ import XCTest
 class ProductsListViewModelTests: XCTestCase {
     
     func testIsLoadingInitiallyFalse() {
+        // Given
         let productFetcher = MockProductFetcher()
+        // When
         let viewModel = ProductsListViewModel(productFetcher: productFetcher)
+        // Then
         XCTAssertFalse(viewModel.isLoading)
     }
 
     func testIsLoadingAfterRefresh() {
+        // Given
         let productFetcher = MockProductFetcher()
+        // When
         let viewModel = ProductsListViewModel(productFetcher: productFetcher)
-        
         // Simulate a refresh
         viewModel.refreshProduct()
-        
+        // Then
         XCTAssertTrue(viewModel.isLoading)
     }
     
