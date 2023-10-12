@@ -16,8 +16,8 @@ class NetworkingManager: ProductFetching {
     static let shared = NetworkingManager()
     
     func fetchProducts(completed: @escaping (Result<[Products], NetworkingError>) -> Void) {
-        let url = EndPoints.baseUrl.rawValue
-        fetchData(fromUrl: url) { result in
+        let productsUrl = EndPoints.baseUrl.rawValue
+        fetchData(fromUrl: productsUrl) { result in
             switch result {
             case .success(let data):
                 do {

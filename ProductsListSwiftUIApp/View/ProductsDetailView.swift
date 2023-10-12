@@ -10,62 +10,62 @@ import SwiftUI
 struct ProductsDetailView: View {
     let product: Products
     var body: some View {
-        VStack {
-            // Thumbnail image at the top
-            AsyncImage(url: product.thumbNailUrl) { image in
-                image
-                    .resizable()
-                    .scaledToFit()
-                    .aspectRatio(contentMode: .fill)
-                    .frame(width: 140, height: 100)
-                    .cornerRadius(10)
-                    .foregroundColor(Color.orange)
-            } placeholder: {
-                Circle()
-                    .frame(width: 32, height: 32)
-                    .background(Color(.systemGray5))
-            }
-            VStack(alignment: .leading) {
-                HStack {
-                    Text("Title: ")
-                        .bold()
-                    Text(product.title)
-                }
-                HStack {
-                    Text("Rating:")
-                        .bold()
-                    Text("\(product.rating)")
-                }
-                HStack {
-                    Text("Category: ")
-                        .bold()
-                    Text(product.category)
-                }
-                HStack {
-                    Text("Description: ")
-                        .bold()
-                    Text(product.description)
-                }
-                HStack {
-                    Text("Stock: ").bold()
-                    Text("\(product.stock)")
-                }
-                HStack {
-                    Text("Price: ").bold()
-                    Text("\(product.price)")
-                }
-                HStack {
-                    Text("Discount: ").bold()
-                    Text("\(product.discountPercentage.toPercentString())")
-                }
-                HStack {
-                    Text("Tumbnail:").bold()
-                    Text(product.thumbnail)
-                        .padding()
+        HStack {
+            HStack {
+                // Mark:- Load image in full
+                AsyncImage(url: product.thumbNailUrl) { image in
+                    image
+                        .resizable()
+                        .scaledToFit()
+                        .aspectRatio(contentMode: .fit)
+                        .frame(width: UIScreen.main.bounds.width-30, height: 140)
+                        .foregroundColor(Color.orange)
+                    HStack {
+                        Text("Price:").bold()
+                        Text("\(product.price.toCurrency())")
+                            .bold()
+                    }
+                } placeholder: {
+                    Text("Thumbnail")
+                        .frame(width: 32, height: 32)
+                        .background(Color(.systemGray5))
                 }
             }
-            Spacer()
-                .navigationBarTitle(product.brand, displayMode: .inline)
+            .padding()
         }
+        VStack(alignment: .leading) {
+            HStack {
+                Text("Category:")
+                    .bold()
+                Text(product.category)
+            }
+            .padding(2)
+            VStack(alignment: .leading) {
+                Text("Description: ")
+                    .bold()
+                Text(product.description)
+            }
+            .padding(2)
+            HStack {
+                Text("Stock:").bold()
+                Text("\(product.stock)")
+            }
+            HStack {
+                Text("Rating:")
+                    .bold()
+                Text("\(product.rating)")
+            }
+            .padding(2)
+            HStack {
+                Text("Discount:")
+                    .bold()
+                Text("\(product.discountPercentage.toPercentString())")
+                    .foregroundColor(product.discountPercentage > 0 ? .red : .green)
+            }
+            
+            Spacer()
+                .navigationBarTitle(product.title, displayMode: .inline)
+        }
+        .padding()
     }
 }

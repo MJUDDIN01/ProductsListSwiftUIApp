@@ -15,10 +15,11 @@ class ProductsListViewModel: ObservableObject {
     
     private let productFetcher: ProductFetching
     
-    // Added constructor dependency 
+    // Mark:- Added constructor dependency
     init(productFetcher: ProductFetching) {
         self.productFetcher = productFetcher
     }
+    // Mark:- Refresh products
     func pullToRefresh() {
         products.removeAll()
         refreshProduct()

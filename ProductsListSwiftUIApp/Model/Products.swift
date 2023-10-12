@@ -22,7 +22,6 @@ struct Products: Identifiable, Codable {
     let thumbnail: String
     let images: [String]
     
-    
     var thumbNailUrl: URL? {
         return URL(string: thumbnail)
     }
