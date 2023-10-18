@@ -46,6 +46,7 @@ struct ProductsListView: View {
                     viewModel.products = viewModel.products.filter { productIdsInSearch.contains($0.id) }
                 }
             }
+            .navigationTitle("Latest Products")
             .onAppear { viewModel.refreshProduct() }
             .refreshable {
                 viewModel.pullToRefresh()
